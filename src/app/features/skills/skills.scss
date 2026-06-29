@@ -1,0 +1,38 @@
+.skills {
+  padding: 6rem 2rem;
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  &__title {
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+  }
+
+  &__subtitle {
+    margin-bottom: 3rem;
+    color: #a1a1aa;
+  }
+
+  &__grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  &__item {
+    padding: 1rem 1.5rem;
+    border-radius: 14px;
+    background: #111114;
+    border: 1px solid #27272a;
+
+    transition: 0.2s;
+
+    &:hover {
+      border-color: #4f46e5;
+      transform: translateY(-2px);
+    }
+  }
+}

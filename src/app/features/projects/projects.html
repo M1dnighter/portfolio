@@ -1,0 +1,61 @@
+<section
+  class="projects"
+  id="projects"
+>
+  <div class="projects__container">
+
+    <h2 class="projects__title">
+      Проекты
+    </h2>
+
+    <p class="projects__subtitle">
+      Проекты, демонстрирующие мои навыки разработки веб-приложений
+      на Angular и интеграции внешних сервисов.
+    </p>
+
+    <div class="projects__list">
+
+      @for (project of projects; track project.title) {
+
+        <article class="project-card">
+
+          <div class="project-card__header">
+            <h3 class="project-card__title">
+              {{ project.title }}
+            </h3>
+
+            <a
+              [href]="project.github"
+              target="_blank"
+              class="project-card__link"
+            >
+              GitHub →
+            </a>
+          </div>
+
+          <p class="project-card__description">
+            {{ project.description }}
+          </p>
+
+          <div class="project-card__stack">
+            @for (tech of project.stack; track tech) {
+              <span class="project-card__tag">
+                {{ tech }}
+              </span>
+            }
+          </div>
+
+          <ul class="project-card__features">
+            @for (feature of project.features; track feature) {
+              <li>{{ feature }}</li>
+            }
+          </ul>
+
+        </article>
+
+      }
+
+    </div>
+
+  </div>
+</section>

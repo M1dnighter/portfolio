@@ -1,0 +1,18 @@
+<section class="stats">
+  <div class="stats__container">
+    @for (stat of stats; track stat.label) {
+      <article class="stats__card">
+        <div class="stats__value">
+          {{ stat.value }}
+          @if (stat.suffix) {
+            <span>{{ stat.suffix }}</span>
+          }
+        </div>
+
+        <div class="stats__label">
+          {{ stat.label }}
+        </div>
+      </article>
+    }
+  </div>
+</section>

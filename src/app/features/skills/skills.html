@@ -1,0 +1,21 @@
+<section class="skills">
+  <div class="skills__container">
+
+    <h2 class="skills__title">
+      Технологии
+    </h2>
+
+    <p class="skills__subtitle">
+      Основной стек и инструменты, которые использую в проектах
+    </p>
+
+    <div class="skills__grid">
+      @for (skill of skills; track skill) {
+        <div class="skills__item">
+          {{ skill }}
+        </div>
+      }
+    </div>
+
+  </div>
+</section>
